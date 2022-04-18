@@ -1,6 +1,25 @@
 import Head from 'next/head'
+import supabase from '@/utils/supabase'
 
-export default function Home() {
+export async function getStaticProps() {
+  const { data: posts, error } = await supabase.from('todos').select('*');
+
+  if (error) {
+    throw new Error(error);
+  }
+
+  return {
+    props: {
+      posts,
+    },
+  };
+}
+
+
+export default function Home(props) {
+  
+  console.log(props)
+
   return (
     <div >
       <Head>
