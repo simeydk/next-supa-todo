@@ -2,21 +2,22 @@ import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div className="bg-slate-900 h-screen p-4 flex flex-col items-center justify-center">
+    <div >
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="h-screen">
+        <main className="py-8 max-w-screen-md mx-auto">
+        <h1 className="text-2xl font-bold py-8">#Todo</h1>
+        <ul>
+          <li>#TODO: Todos go here</li>
+        </ul>
 
-      <main className="mx-auto p-8 rounded">
-        <h1 className="text-5xl font-bold text-slate-600 leading-snug">
-          <a href="https://nextjs.org" target="_blank" rel="noreferrer"><span className="text-transparent bg-clip-text bg-gradient-to-br from-sky-500 to-sky-700 hover:to-sky-500 hover:from-lime-200 hover:underline">NextJS</span></a> &&<br/> 
-          <a href="https://jestjs.io" target="_blank" rel="noreferrer"><span className="text-transparent bg-clip-text bg-gradient-to-br from-sky-500 to-sky-700 hover:to-sky-500 hover:from-lime-200 hover:underline">Jest</span></a> && <br/>
-          <a href="https://tailwindcss.io" target="_blank" rel="noreferrer"><span className="text-transparent bg-clip-text bg-gradient-to-br from-sky-500 to-sky-700 hover:to-sky-500 hover:from-lime-200 hover:underline">TailwindCSS</span></a>
-        </h1>
-        
+        </main>
+      </div>
 
-      </main>
+      
 
   
     </div>
