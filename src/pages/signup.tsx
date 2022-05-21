@@ -1,19 +1,18 @@
 import { FormEvent, useState } from "react";
-// import supabase from "@/utils/supabase";
+import supabase from "@/utils/supabase";
 import { useRouter } from "next/router";
 
-export default function Login() {
+export default function SignUp() {
     const router = useRouter()
     const [user, setUser] = useState(null);
     const onSubmit = async (e: FormEvent) => {
         e.preventDefault()
-        // const email = e.target.email.value
-        // const password = e.target.password.value
-        // const response = await supabase.auth.signIn({ email, password });
-        // console.log({response})
-        // setUser(response.user)
-        // await router.push('/'); 
-        // router.reload()
+        const email = e.target.email.value
+        const password = e.target.password.value
+        const response = await supabase.auth.signUp({ email, password });
+        console.log({response})
+        setUser(response.user)
+        router.push('/login')
     }
 
     return <div>

@@ -61,7 +61,7 @@ export default function Home(props) {
                 <main className="py-8 max-w-screen-md mx-auto">
                     <h1 className="text-2xl font-bold py-8">#Todo</h1>
                     <div className="flex flex-col gap-4 w-full">
-                        {props?.lists.map((list, i) => (
+                        {props?.lists?.map((list, i) => (
                             <div
                                 key={i}
                                 className="border rounded p-4 flex flex-col gap-4"
